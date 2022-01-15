@@ -1,103 +1,287 @@
 fileFormatVersion: 2
 guid: a782c5fcec8415b448cc3a13c8a4b8bc
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: button1
-    100002: button2
-    100004: button3
-    100006: button4
-    100008: button5
-    100010: button6
-    100012: button7
-    100014: button8
-    100016: button9
-    100018: door_glass
-    100020: door_glass 1
-    100022: door_pinlock
-    100024: door_sliding1
-    100026: door_sliding2
-    100028: pinpad
-    100030: //RootNode
-    100032: SFL_Door
-    400000: button1
-    400002: button2
-    400004: button3
-    400006: button4
-    400008: button5
-    400010: button6
-    400012: button7
-    400014: button8
-    400016: button9
-    400018: door_glass
-    400020: door_glass 1
-    400022: door_pinlock
-    400024: door_sliding1
-    400026: door_sliding2
-    400028: pinpad
-    400030: SFL_Door
-    400032: //RootNode
-    2100000: Trim1
-    2100002: SFL_LabWhiteWalls
-    2100004: lamp_light
-    2100006: SFL_Floors
-    2100008: green_light
-    2100010: _monitor1
-    2100012: DeskProps
-    2100014: phong1
-    2100016: SFL_Glass
-    2300000: button1
-    2300002: button2
-    2300004: button3
-    2300006: button4
-    2300008: button5
-    2300010: button6
-    2300012: button7
-    2300014: button8
-    2300016: button9
-    2300018: door_glass
-    2300020: door_glass 1
-    2300022: door_pinlock
-    2300024: door_sliding1
-    2300026: door_sliding2
-    2300028: pinpad
-    2300030: SFL_Door
-    3300000: button1
-    3300002: button2
-    3300004: button3
-    3300006: button4
-    3300008: button5
-    3300010: button6
-    3300012: button7
-    3300014: button8
-    3300016: button9
-    3300018: door_glass
-    3300020: door_glass 1
-    3300022: door_pinlock
-    3300024: door_sliding1
-    3300026: door_sliding2
-    3300028: pinpad
-    3300030: SFL_Door
-    4300000: SFL_Door
-    4300002: door_pinlock
-    4300004: pinpad
-    4300006: button1
-    4300008: button2
-    4300010: button3
-    4300012: button4
-    4300014: button5
-    4300016: button6
-    4300018: button7
-    4300020: button8
-    4300022: button9
-    4300024: door_sliding2
-    4300026: door_glass
-    4300028: door_sliding1
-    4300030: door_glass
-    2186277476908879412: ImportLogs
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: button1
+  - first:
+      1: 100002
+    second: button2
+  - first:
+      1: 100004
+    second: button3
+  - first:
+      1: 100006
+    second: button4
+  - first:
+      1: 100008
+    second: button5
+  - first:
+      1: 100010
+    second: button6
+  - first:
+      1: 100012
+    second: button7
+  - first:
+      1: 100014
+    second: button8
+  - first:
+      1: 100016
+    second: button9
+  - first:
+      1: 100018
+    second: door_glass
+  - first:
+      1: 100020
+    second: door_glass 1
+  - first:
+      1: 100022
+    second: door_pinlock
+  - first:
+      1: 100024
+    second: door_sliding1
+  - first:
+      1: 100026
+    second: door_sliding2
+  - first:
+      1: 100028
+    second: pinpad
+  - first:
+      1: 100030
+    second: //RootNode
+  - first:
+      1: 100032
+    second: SFL_Door
+  - first:
+      4: 400000
+    second: button1
+  - first:
+      4: 400002
+    second: button2
+  - first:
+      4: 400004
+    second: button3
+  - first:
+      4: 400006
+    second: button4
+  - first:
+      4: 400008
+    second: button5
+  - first:
+      4: 400010
+    second: button6
+  - first:
+      4: 400012
+    second: button7
+  - first:
+      4: 400014
+    second: button8
+  - first:
+      4: 400016
+    second: button9
+  - first:
+      4: 400018
+    second: door_glass
+  - first:
+      4: 400020
+    second: door_glass 1
+  - first:
+      4: 400022
+    second: door_pinlock
+  - first:
+      4: 400024
+    second: door_sliding1
+  - first:
+      4: 400026
+    second: door_sliding2
+  - first:
+      4: 400028
+    second: pinpad
+  - first:
+      4: 400030
+    second: SFL_Door
+  - first:
+      4: 400032
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: Trim1
+  - first:
+      21: 2100002
+    second: SFL_LabWhiteWalls
+  - first:
+      21: 2100004
+    second: lamp_light
+  - first:
+      21: 2100006
+    second: SFL_Floors
+  - first:
+      21: 2100008
+    second: green_light
+  - first:
+      21: 2100010
+    second: _monitor1
+  - first:
+      21: 2100012
+    second: DeskProps
+  - first:
+      21: 2100014
+    second: phong1
+  - first:
+      21: 2100016
+    second: SFL_Glass
+  - first:
+      23: 2300000
+    second: button1
+  - first:
+      23: 2300002
+    second: button2
+  - first:
+      23: 2300004
+    second: button3
+  - first:
+      23: 2300006
+    second: button4
+  - first:
+      23: 2300008
+    second: button5
+  - first:
+      23: 2300010
+    second: button6
+  - first:
+      23: 2300012
+    second: button7
+  - first:
+      23: 2300014
+    second: button8
+  - first:
+      23: 2300016
+    second: button9
+  - first:
+      23: 2300018
+    second: door_glass
+  - first:
+      23: 2300020
+    second: door_glass 1
+  - first:
+      23: 2300022
+    second: door_pinlock
+  - first:
+      23: 2300024
+    second: door_sliding1
+  - first:
+      23: 2300026
+    second: door_sliding2
+  - first:
+      23: 2300028
+    second: pinpad
+  - first:
+      23: 2300030
+    second: SFL_Door
+  - first:
+      33: 3300000
+    second: button1
+  - first:
+      33: 3300002
+    second: button2
+  - first:
+      33: 3300004
+    second: button3
+  - first:
+      33: 3300006
+    second: button4
+  - first:
+      33: 3300008
+    second: button5
+  - first:
+      33: 3300010
+    second: button6
+  - first:
+      33: 3300012
+    second: button7
+  - first:
+      33: 3300014
+    second: button8
+  - first:
+      33: 3300016
+    second: button9
+  - first:
+      33: 3300018
+    second: door_glass
+  - first:
+      33: 3300020
+    second: door_glass 1
+  - first:
+      33: 3300022
+    second: door_pinlock
+  - first:
+      33: 3300024
+    second: door_sliding1
+  - first:
+      33: 3300026
+    second: door_sliding2
+  - first:
+      33: 3300028
+    second: pinpad
+  - first:
+      33: 3300030
+    second: SFL_Door
+  - first:
+      43: 4300000
+    second: SFL_Door
+  - first:
+      43: 4300002
+    second: door_pinlock
+  - first:
+      43: 4300004
+    second: pinpad
+  - first:
+      43: 4300006
+    second: button1
+  - first:
+      43: 4300008
+    second: button2
+  - first:
+      43: 4300010
+    second: button3
+  - first:
+      43: 4300012
+    second: button4
+  - first:
+      43: 4300014
+    second: button5
+  - first:
+      43: 4300016
+    second: button6
+  - first:
+      43: 4300018
+    second: button7
+  - first:
+      43: 4300020
+    second: button8
+  - first:
+      43: 4300022
+    second: button9
+  - first:
+      43: 4300024
+    second: door_sliding2
+  - first:
+      43: 4300026
+    second: door_glass
+  - first:
+      43: 4300028
+    second: door_sliding1
+  - first:
+      43: 4300030
+    second: door_glass
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -130,25 +314,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -157,10 +348,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
-  copyAvatar: 0
+  referencedClips: []
+  importAnimation: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -170,13 +361,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 1
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
