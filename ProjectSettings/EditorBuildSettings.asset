@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FPS/Scenes/MyScene.unity
     guid: 83bdc0aa98fd0964baf2c44b0ef70b68
+  - enabled: 1
+    path: Assets/FPS/Scenes/MyScene2.unity
+    guid: e842f1364fce2a144aebcf6b8869ad3a
+  - enabled: 1
+    path: Assets/FPS/Scenes/SecondaryScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
