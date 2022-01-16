@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -7,11 +8,22 @@ using UnityEngine;
 public class QuestionsManager : MonoBehaviour
 {
     /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    private TextMeshProUGUI display;
+
+    /// <summary>
     /// Number of puzzles to complete before the lift
     /// button code is revealed
     /// </summary>
     [SerializeField]
     private int noPuzzles = 3;
+
+    /// <summary>
+    /// Current question number.
+    /// </summary>
+    private int currQuestion = 1;
 
     /// <summary>
     /// Stores the resultant button code
@@ -32,13 +44,20 @@ public class QuestionsManager : MonoBehaviour
 
     private void Start()
     {
+        // Make sure the text display is populated
+        if (!display)
+        {
+            Debug.Log("Questions text is not assigned.");
+            Destroy(this);
+        }
+
         questions = new List<string>();
         answers = new List<int>();
 
         for (int i = 0; i < noPuzzles; i++)
         {
-            int val1 = Random.Range(25, 50);
-            int val2 = Random.Range(1, 25);
+            int val1 = Random.Range(30, 99);
+            int val2 = Random.Range(1, 29);
             string op = "";
             int answer = 0;
 
@@ -59,6 +78,24 @@ public class QuestionsManager : MonoBehaviour
         }
 
         buttonCode = (int)Mathf.Ceil(buttonCode / 4);
+        UpdateQuestionDisplay();
+    }
+
+    /// <summary>
+    /// Updates the question display text with the current question
+    /// string.
+    /// </summary>
+    private void UpdateQuestionDisplay()
+    {
+        display.text = "Current task:\n" + questions[currQuestion - 1];
+    }
+
+    /// <summary>
+    /// Displays the button code.
+    /// </summary>
+    private void DisplayButtonCode()
+    {
+        display.text = "Button code:\n" + buttonCode.ToString();
     }
 
     /// <summary>
@@ -75,15 +112,20 @@ public class QuestionsManager : MonoBehaviour
     public string GetQuestion(int i) { return questions[i]; }
 
     /// <summary>
-    /// Checks if a given answer value is correct for a given
+    /// Checks if a given answer value is correct for the current
     /// question.
     /// </summary>
-    /// <param name="i">Answers list element index</param>
     /// <param name="answer">Answer to check</param>
     /// <returns></returns>
-    public bool CheckResult(int i, int answer)
+    public bool CheckResult(int answer)
     {
-        if (answers[i] == answer) return true;
+        if (answers[currQuestion - 1] == answer)
+        {
+            currQuestion++;
+            if (currQuestion <= noPuzzles) UpdateQuestionDisplay();
+            else DisplayButtonCode();
+            return true;
+        }
         return false;
     }
 }

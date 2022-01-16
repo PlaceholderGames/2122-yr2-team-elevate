@@ -8,8 +8,9 @@ using System;
 /// </summary>
 public class CalculatorManager : MonoBehaviour
 {
+    private QuestionsManager qm;
     [SerializeField]
-    TextMeshProUGUI display;
+    private TextMeshProUGUI display;
     [SerializeField]
     private Button btnNo9;
     [SerializeField]
@@ -42,6 +43,14 @@ public class CalculatorManager : MonoBehaviour
 
     private void Start()
     {
+        // Attempt to get a ref to Questions Manager
+        qm = GetComponent<QuestionsManager>();
+        if (!qm)
+        {
+            Debug.Log("Questions Manager is not present.");
+            Destroy(this);
+        }
+
         // Make sure all possible buttons are populated
         if (!btnNo9 || !btnNo8 || !btnNo7 || !btnNo6 || !btnNo5 || !btnNo4 || !btnNo3 || !btnNo2 || !btnNo1 || !btnPlus || !btnMinus || !btnEquals)
         {
@@ -97,7 +106,8 @@ public class CalculatorManager : MonoBehaviour
             int result = 0;
             if (selectedOp == "+") result = firstVal + curVal;
             else if (selectedOp == "-") result = firstVal - curVal;
-            display.text = result.ToString();
+            display.text = "0";
+            qm.CheckResult(result);
         }
         else
         {
