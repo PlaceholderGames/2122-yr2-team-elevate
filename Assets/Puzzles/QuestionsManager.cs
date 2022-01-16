@@ -90,8 +90,8 @@ public class QuestionsManager : MonoBehaviour
         display.text = "Current tasks:";
         for (int i = 0; i < noQuestions; i++)
         {
-            if (i < currQuestion - 1) display.text += "\n<s>" + questions[i] + "</s>";
-            else display.text += "\n" + questions[i];
+            if (i < currQuestion - 1) display.text += "\n\n<s>" + questions[i] + "</s>";
+            else display.text += "\n\n" + questions[i];
         }
     }
 
