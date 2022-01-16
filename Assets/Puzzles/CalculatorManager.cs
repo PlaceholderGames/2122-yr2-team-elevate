@@ -42,18 +42,22 @@ public class CalculatorManager : MonoBehaviour
 
     private void Start()
     {
+        // Make sure all possible buttons are populated
         if (!btnNo9 || !btnNo8 || !btnNo7 || !btnNo6 || !btnNo5 || !btnNo4 || !btnNo3 || !btnNo2 || !btnNo1 || !btnPlus || !btnMinus || !btnEquals)
         {
             Debug.Log("One or more calculator buttons not assigned.");
             Destroy(this);
         }
 
+        // Make sure the text display is populated
         if (!display)
         {
             Debug.Log("Calculator display is not assigned.");
             Destroy(this);
         }
 
+        // Add on-click listeners to all buttons to call their
+        // appropriate functions
         btnNo0.onClick.AddListener(() => { PressNumButton(0); });
         btnNo1.onClick.AddListener(() => { PressNumButton(1); });
         btnNo2.onClick.AddListener(() => { PressNumButton(2); });
@@ -69,6 +73,10 @@ public class CalculatorManager : MonoBehaviour
         btnEquals.onClick.AddListener(() => { PressOperatorButton("="); });
     }
 
+    /// <summary>
+    /// Handles a key press from a calculator numerical button.
+    /// </summary>
+    /// <param name="btn">Button value</param>
     private void PressNumButton(int btn)
     {
         Debug.Log(btn);
@@ -76,6 +84,10 @@ public class CalculatorManager : MonoBehaviour
         else display.text += btn.ToString();
     }
 
+    /// <summary>
+    /// Handles a key press from an calculator operator button.
+    /// </summary>
+    /// <param name="op">Operator symbol</param>
     private void PressOperatorButton(string op)
     {
         Debug.Log(op);
