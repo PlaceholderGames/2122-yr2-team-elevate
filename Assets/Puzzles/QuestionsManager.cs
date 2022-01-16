@@ -14,11 +14,11 @@ public class QuestionsManager : MonoBehaviour
     private TextMeshProUGUI display;
 
     /// <summary>
-    /// Number of puzzles to complete before the lift
+    /// Number of questions to complete before the lift
     /// button code is revealed
     /// </summary>
     [SerializeField]
-    private int noPuzzles = 3;
+    private int noQuestions = 3;
 
     /// <summary>
     /// Current question number.
@@ -54,7 +54,7 @@ public class QuestionsManager : MonoBehaviour
         questions = new List<string>();
         answers = new List<int>();
 
-        for (int i = 0; i < noPuzzles; i++)
+        for (int i = 0; i < noQuestions; i++)
         {
             int val1 = Random.Range(30, 99);
             int val2 = Random.Range(1, 29);
@@ -82,12 +82,17 @@ public class QuestionsManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Updates the question display text with the current question
-    /// string.
+    /// Updates the question display text question strings and
+    /// strikeouts already complete questions.
     /// </summary>
     private void UpdateQuestionDisplay()
     {
-        display.text = "Current task:\n" + questions[currQuestion - 1];
+        display.text = "Current tasks:";
+        for (int i = 0; i < noQuestions; i++)
+        {
+            if (i < currQuestion - 1) display.text += "\n<s>" + questions[i] + "</s>";
+            else display.text += "\n" + questions[i];
+        }
     }
 
     /// <summary>
@@ -122,7 +127,7 @@ public class QuestionsManager : MonoBehaviour
         if (answers[currQuestion - 1] == answer)
         {
             currQuestion++;
-            if (currQuestion <= noPuzzles) UpdateQuestionDisplay();
+            if (currQuestion <= noQuestions) UpdateQuestionDisplay();
             else DisplayButtonCode();
             return true;
         }
