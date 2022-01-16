@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Manages the life time of the maths puzzle
+/// Manages the questions for the maths puzzle.
 /// </summary>
-public class MathsPuzzle : MonoBehaviour
+public class QuestionsManager : MonoBehaviour
 {
     /// <summary>
     /// Number of puzzles to complete before the lift
