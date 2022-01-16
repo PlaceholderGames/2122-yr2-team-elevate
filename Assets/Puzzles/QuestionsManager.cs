@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Manages the questions for the maths puzzle.
@@ -8,10 +10,16 @@ using UnityEngine;
 public class QuestionsManager : MonoBehaviour
 {
     /// <summary>
-    /// 
+    /// Display for questions list
     /// </summary>
     [SerializeField]
     private TextMeshProUGUI display;
+
+    /// <summary>
+    /// Scene to go to after this puzzle is complete
+    /// </summary>
+    [SerializeField]
+    private string nextScene = "MyScene2";
 
     /// <summary>
     /// Number of questions to complete before the lift
@@ -127,9 +135,19 @@ public class QuestionsManager : MonoBehaviour
         {
             currQuestion++;
             if (currQuestion <= noQuestions) UpdateQuestionDisplay();
-            else DisplayButtonCode();
+            else
+            {
+                DisplayButtonCode();
+                StartCoroutine(LoadNextScene());
+            }
             return true;
         }
         return false;
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
+        while (!asyncLoad.isDone) yield return null;
     }
 }

@@ -88,7 +88,6 @@ public class CalculatorManager : MonoBehaviour
     /// <param name="btn">Button value</param>
     private void PressNumButton(int btn)
     {
-        Debug.Log(btn);
         if (display.text == "0") display.text = btn.ToString();
         else display.text += btn.ToString();
     }
@@ -99,7 +98,6 @@ public class CalculatorManager : MonoBehaviour
     /// <param name="op">Operator symbol</param>
     private void PressOperatorButton(string op)
     {
-        Debug.Log(op);
         if (op == "=")
         {
             int curVal = Int32.Parse(display.text);
