@@ -3103,7 +3103,7 @@ GameObject:
   - component: {fileID: 942924333}
   - component: {fileID: 942924335}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: PuzzleController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3123,6 +3123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 1133832446}
   noQuestions: 3
+  buttonCode: 24
 --- !u!4 &942924334
 Transform:
   m_ObjectHideFlags: 0

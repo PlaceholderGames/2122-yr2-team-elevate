@@ -26,9 +26,10 @@ public class QuestionsManager : MonoBehaviour
     private int currQuestion = 1;
 
     /// <summary>
-    /// Stores the resultant button code
+    /// Button code to be used with the list
     /// </summary>
-    private int buttonCode = 0;
+    [SerializeField]
+    private int buttonCode = 24;
 
     /// <summary>
     /// List of questions to be answered. These will be used for 
@@ -74,10 +75,8 @@ public class QuestionsManager : MonoBehaviour
 
             questions.Add(val1.ToString() + " " + op + " " + val2.ToString());
             answers.Add(answer);
-            buttonCode += answer;
         }
 
-        buttonCode = (int)Mathf.Ceil(buttonCode / 4);
         UpdateQuestionDisplay();
     }
 
@@ -100,7 +99,7 @@ public class QuestionsManager : MonoBehaviour
     /// </summary>
     private void DisplayButtonCode()
     {
-        display.text = "Button code:\n" + buttonCode.ToString();
+        display.text = "Button code:\n\n" + buttonCode.ToString();
     }
 
     /// <summary>
