@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 5391986374566301942}
   - component: {fileID: 5391986374566301943}
   - component: {fileID: 5391986374566301944}
-  - component: {fileID: 5391986374566301940}
-  - component: {fileID: 2901986892210039716}
   - component: {fileID: -8987669611152485733}
   m_Layer: 0
   m_Name: Pickup_VRHMD
@@ -65,43 +63,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5391986374566301940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5391986374566301945}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bffb1311779ed346a19fef7c9fa65ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VerticalBobFrequency: 1
-  BobbingAmount: 0.3
-  RotatingSpeed: 360
-  PickupSfx: {fileID: 8300000, guid: 7b83d61917ac1224f942a0609b1221f2, type: 3}
-  PickupVfxPrefab: {fileID: 0}
-  WeaponPrefab: {fileID: 0}
---- !u!114 &2901986892210039716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5391986374566301945}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb683ec2991b784fa1d1fea214ca53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VerticalBobFrequency: 1
-  BobbingAmount: 1
-  RotatingSpeed: 360
-  PickupSfx: {fileID: 8300000, guid: 8dfdbc346713580429db9079ad1ff964, type: 3}
-  PickupVfxPrefab: {fileID: 0}
-  Weapon: {fileID: 0}
-  BulletCount: 30
 --- !u!114 &-8987669611152485733
 MonoBehaviour:
   m_ObjectHideFlags: 0
